@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(232, 220, 231);
+  font-size: 40px;
+  padding: 5rem;
+}
+
+body {
+  background: rgb(255, 105, 180);
+}
+
+output {
+  margin-left: 15rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+
+#red::-webkit-slider-runnable-track {
+  background: #f70202;
+  height: 0.7rem;
+  border-radius: 10px;
+}
+#red::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: red;
+  margin-top: -5.6px;
+  border-radius: 20px;
+}
+
+#green::-webkit-slider-runnable-track {
+  background: #1d963b;
+  height: 0.7rem;
+  border-radius: 10px;
+}
+#green::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: #1d963b;
+  margin-top: -5.6px;
+  border-radius: 20px;
+}
+
+#blue::-webkit-slider-runnable-track {
+  background: #043cbef4;
+  height: 0.7rem;
+  border-radius: 10px;
+}
+#blue::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: #043cbef4;
+  margin-top: -5.6px;
+  border-radius: 20px;
+}
+
+/* any pseudo-element prefixed with -webkit will be applied to the Chrome, Safari, Opera and Edge (post-Chromium) browsers. Anything prefixed with -moz pertains to Firefox. */
