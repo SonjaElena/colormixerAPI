@@ -5,21 +5,32 @@
   font-family: monospace;
 }
 
-header {
+main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(232, 220, 231);
+  flex-direction: column;
+  background-color: #891652;
   font-size: 40px;
   padding: 5rem;
 }
 
 body {
-  background: rgb(255, 105, 180);
+  background: #240a34;
 }
 
 output {
   margin-left: 15rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+.row p {
+  margin-right: 2rem;
 }
 
 input[type="range"] {
@@ -72,4 +83,30 @@ input[type="range"] {
   border-radius: 20px;
 }
 
-/* any pseudo-element prefixed with -webkit will be applied to the Chrome, Safari, Opera and Edge (post-Chromium) browsers. Anything prefixed with -moz pertains to Firefox. */
+#color {
+  margin: 5rem 0rem;
+}
+
+button {
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 9px 18px;
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #eabe6c;
+  border-color: #eabe6c;
+}
+
+button:hover {
+  color: #240a34;
+  border: 1px solid #240a34;
+  background-color: #eabe6c;
+}

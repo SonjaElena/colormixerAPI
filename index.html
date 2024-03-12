@@ -10,12 +10,32 @@
 
 <body>
 
-    <header>
-        <input type="range" id="red" step="1" min="0" max="255" value="255">
-        <input type="range" id="green" step="1" min="0" max="255" value="105">
-        <input type="range" id="blue" step="1" min="0" max="255" value="180">
-        <p id="color">rgb(255, 105, 180)</output>
-    </header>
+    <main>
+        <div class="row">
+            <p>r</p>
+            <input type="range" id="red" step="1" min="0" max="255" value="255">
+        </div>
+
+        <div class="row">
+            <p>g</p>
+            <input type="range" id="green" step="1" min="0" max="255" value="105">
+        </div>
+
+        <div class="row">
+            <p>b</p>
+            <input type="range" id="blue" step="1" min="0" max="255" value="180">
+        </div>
+
+        <div>
+            <p id="color"></output>
+        </div>
+
+        <div>
+            <button onclick="randomColor(urlApi)">Random color</button>
+        </div>
+    </main>
+
+    <footer></footer>
 
     <script src="script.js"></script>
 </body>

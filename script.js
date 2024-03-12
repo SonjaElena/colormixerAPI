@@ -1,22 +1,38 @@
 let colorcode = document.getElementById("color");
 let colorcontainer = document.querySelector("body");
 
+let hexCode = document.getElementById("color");
+
+let urlApi = "https://x-colors.yurace.pro/api/random";
+
+// Regler
 let slred = document.getElementById("red");
 let slgreen = document.getElementById("green");
 let slblue = document.getElementById("blue");
 
-slred.addEventListener("input", colorChange);
-slgreen.addEventListener("input", colorChange);
-slblue.addEventListener("input", colorChange);
+// Function
+async function randomColor(url) {
+  try {
+    let response = await fetch(url);
 
-function colorChange() {
-  let vred = slred.value;
-  let vgreen = slgreen.value;
-  let vblue = slblue.value;
+    if (response.ok) {
+      let data = await response.json();
 
-  let rgbvalues = `rgb(${vred},${vgreen},${vblue})`;
+      hexCode.innerHTML = data.hex;
 
-  colorcontainer.style.backgroundColor = rgbvalues;
+      let rgbValue = data.rgb;
 
-  colorcode.textContent = rgbvalues;
+      colorcontainer.style.backgroundColor = rgbValue;
+
+      let numbers = rgbValue.match(/\d+/g);
+
+      document.getElementById("red").value = numbers[0];
+      document.getElementById("green").value = numbers[1];
+      document.getElementById("blue").value = numbers[2];
+    }
+  } catch (err) {
+    console.error("Could not catch color", err);
+  }
 }
+
+randomColor(urlApi);
